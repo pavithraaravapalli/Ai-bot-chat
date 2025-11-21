@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Living Tips Bot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-leaf"></i> Green Living Tips Bot</h1>
+      <p>Your personal AI assistant for sustainable living and eco-friendly choices</p>
+    </header>
+    
+    <div class="eco-score">
+      <i class="fas fa-seedling"></i>
+      <span>Eco Score: 0</span>
+      
+    </div>
+    
+    <div id="chat-container">
+      <div id="chat-header">
+        <i class="fas fa-robot"></i>
+        <span>Eco Assistant</span>
+      </div>
+      
+      <div id="chat-messages">
+      </div>
+      
+      <div class="quick-tips">
+        <div class="quick-tip" onclick="sendQuickTip('plastic')">
+          <i class="fas fa-recycle"></i> Reduce Plastic
+        </div>
+        <div class="quick-tip" onclick="sendQuickTip('energy')">
+          <i class="fas fa-bolt"></i> Save Energy
+        </div>
+        <div class="quick-tip" onclick="sendQuickTip('water')">
+          <i class="fas fa-tint"></i> Conserve Water
+        </div>
+        <div class="quick-tip" onclick="sendQuickTip('food')">
+          <i class="fas fa-utensils"></i> Reduce Waste
+        </div>
+        <div class="quick-tip" onclick="sendQuickTip('transport')">
+          <i class="fas fa-bicycle"></i> Green Transport
+        </div>
+      </div>
+      
+      <div class="chat-controls">
+        <input id="user-input" type="text" placeholder="Ask me about sustainable living..." 
+               onkeypress="handleKeyPress(event)" autocomplete="off" />
+        <button class="btn btn-primary" onclick="sendMessage()">
+          <i class="fas fa-paper-plane"></i> <span class="desktop-text">Send</span>
+        </button>
+        <button class="btn btn-secondary" onclick="showRandomTip()">
+          <i class="fas fa-random"></i> <span class="desktop-text">Random</span>
+        </button>
+        <button class="btn btn-danger" onclick="clearChat()">
+          <i class="fas fa-trash"></i> <span class="desktop-text">Clear</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
